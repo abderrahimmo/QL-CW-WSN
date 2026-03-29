@@ -1,35 +1,44 @@
 // =============================================================================
 //  QLearningMAC.ned
-//  NED Module Description - Self-Adaptive CW for WSN Using Q-Learning
+//  NED Module Description — Self-Adaptive CW for WSN Using Q-Learning
 //  OMNeT++ 6.0 / Castalia 3.3
 //
 //  Thesis : Self-Adaptive Contention Window for WSN Using Q-Learning
 //  University : Ammar Telidji University of Laghouat
-//  Authors   : Makhloufi Mohammed Abderrahim - Makhloufi Khadidja
+//  Authors   : Makhloufi Mohammed Abderrahim — Makhloufi Khadidja
 //  Supervisor : Dr. Lakhdar Oulad Djedid
 // =============================================================================
 
 package node.communication.mac.qlearningMAC;
 
+//
+// QLearningMAC — IEEE 802.15.4 MAC with Q-Learning CW adaptation.
+// Replaces standard BEB with a Q-Learning agent that selects
+// the optimal CW based on (collision_rate, channel_busy, queue_length).
+//
 simple QLearningMAC like node.communication.mac.iMac
 {
     parameters:
         int    nodeId        = default(0);
 
+        // Q-Learning hyperparameters
         double alpha         = default(0.1);
         double gamma         = default(0.9);
         double epsilon0      = default(1.0);
         double epsilonMin    = default(0.01);
         double lambdaDecay   = default(0.005);
 
+        // Reward function weights
         double w1            = default(0.5);
         double w2            = default(0.3);
         double w3            = default(0.2);
 
+        // IEEE 802.15.4 CW bounds
         int    cwMin         = default(8);
         int    cwMax         = default(256);
         double txPowerDbm    = default(0.0);
 
+        // MAC frame parameters
         int    macBufferSize    = default(32);
         int    macFrameOverhead = default(5);
         int    macMaxRetries    = default(3);
@@ -62,6 +71,9 @@ simple QLearningMAC like node.communication.mac.iMac
 }
 
 
+//
+// QL_WSN_Network — WSN testbed using QLearningMAC nodes
+//
 network QL_WSN_Network
 {
     parameters:
