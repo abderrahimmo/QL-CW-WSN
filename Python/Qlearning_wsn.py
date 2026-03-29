@@ -1,4 +1,4 @@
-""""
+"""
 =============================================================================
   q_learning_wsn.py
   Self-Adaptive Contention Window for WSN Using Q-Learning
@@ -16,7 +16,7 @@
     - PDR under heavy traffic  : > 86.5%
     - Convergence              : 150-200 episodes
 =============================================================================
-""""
+"""
 
 import numpy as np
 import random
