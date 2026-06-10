@@ -1,20 +1,3 @@
-ممتاز، هذا التنظيم أفضل وأكثر احترافية:
-
-```text
-QL-CW-WSN/
-├── src/
-│   ├── qlcw_sim.py
-│   └── plot_results.py
-├── data/
-│   ├── results.csv
-│   ├── fig_collisions.png
-│   ├── fig_pdr.png
-│   ├── fig_delay.png
-│   └── fig_energy.png
-└── README.md
-```
-
-إذن يجب أن يكون `README.md` هكذا:
 
 ```markdown
 # QL-CW-WSN: Q-Learning Contention Window Adaptation for IEEE 802.15.4 WSNs
