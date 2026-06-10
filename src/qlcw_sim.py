@@ -168,8 +168,8 @@ def run_averaged(algo, n_nodes, n_slots):
 
 # ===== Configuration =====
 SLOT_DURATION=0.001
-SIM_TIME=60.0
-LAMBDA=10.0
+SIM_TIME=200.0
+LAMBDA=5.0
 TX_SLOTS=1
 CW_MIN=8; CW_MAX=128                      # BEB: standard IEEE 802.15.4 bounds
 CW_VALUES=[8,16,32,64,128,256,512]        # QL-CW: extended action set (contribution)
