@@ -1,0 +1,23 @@
+=== heavy load (lambda=5.0 pkt/s), T=200s, runs=5 ===
+
+--- N=20 nodes ---
+BEB  : PDR=100.00%  Coll=    2337  Delay=0.00699s  En=1117.18
+QL-CW: PDR= 99.93%  Coll=    2222  Delay=0.18693s  En=1106.66
+
+--- N=40 nodes ---
+BEB  : PDR= 99.99%  Coll=   12426  Delay=0.01051s  En=1308.44
+QL-CW: PDR= 99.89%  Coll=   11501  Delay=0.24268s  En=1283.30
+
+--- N=60 nodes ---
+BEB  : PDR= 99.99%  Coll=   40801  Delay=0.02279s  En=1677.89
+QL-CW: PDR= 99.78%  Coll=   37204  Delay=0.45740s  En=1615.74
+
+--- N=80 nodes ---
+BEB  : PDR= 71.25%  Coll=  322617  Delay=11.16495s  En=4743.89
+QL-CW: PDR= 92.11%  Coll=  140302  Delay=5.13978s  En=2673.79
+
+--- N=100 nodes ---
+BEB  : PDR= 49.74%  Coll=  382666  Delay=17.54930s  En=4323.88
+QL-CW: PDR= 66.85%  Coll=  235046  Delay=11.79191s  En=3018.93
+
+[OK] results.csv written
