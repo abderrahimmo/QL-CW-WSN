@@ -1,5 +1,4 @@
 
-```markdown
 # QL-CW-WSN: Q-Learning Contention Window Adaptation for IEEE 802.15.4 WSNs
 
 This repository contains the Python implementation and simulation code developed for the master's thesis:
